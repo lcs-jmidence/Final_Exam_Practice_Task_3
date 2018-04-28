@@ -26,6 +26,33 @@ import PlaygroundSupport
 // Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
 
+//Create background
+canvas.fillColor = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 600)
+
+//Draw Undertone text
+canvas.drawText(message: "undertones", size: 68, x: 15, y: 350)
+
+
+//shift origin over an up
+canvas.translate(byX: 15, byY: 380)
+canvas.drawAxes()
+
+// Loop 19 times
+for i in 1...19 {
+    
+    //rotate
+    canvas.rotate(by: -5)
+    
+    //Przint headline text
+    canvas.drawText(message: "undertones", size: 68, x: 0, y: 0)
+    
+}
+
+
+
+
+
 // COLORS
 let lightGrey = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
